@@ -5,11 +5,16 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class Rabbit4 {
-    @Autowired
+
     private Duck5 Duck;
 
     @Override
     public String toString() {
         return ", в зайце утка " + Duck.toString();
+    }
+
+    @Autowired
+    public void setOcean(Duck5 Duck) {
+        this.Duck = Duck;
     }
 }
